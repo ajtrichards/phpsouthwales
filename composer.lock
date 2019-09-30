@@ -4453,16 +4453,16 @@
         },
         {
             "name": "platformsh/config-reader",
-            "version": "2.2.2",
+            "version": "2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/platformsh/config-reader-php.git",
-                "reference": "c5ace269c35a31638e62695fccdc8e9b81ede0d4"
+                "reference": "9cb8f00884ae28f776f3e33d5b5bff0937d57cdb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/platformsh/config-reader-php/zipball/c5ace269c35a31638e62695fccdc8e9b81ede0d4",
-                "reference": "c5ace269c35a31638e62695fccdc8e9b81ede0d4",
+                "url": "https://api.github.com/repos/platformsh/config-reader-php/zipball/9cb8f00884ae28f776f3e33d5b5bff0937d57cdb",
+                "reference": "9cb8f00884ae28f776f3e33d5b5bff0937d57cdb",
                 "shasum": ""
             },
             "require": {
@@ -4488,7 +4488,7 @@
                 }
             ],
             "description": "Small helper to access Platform.sh environment variables",
-            "time": "2019-04-29T18:25:26+00:00"
+            "time": "2019-09-19T14:38:12+00:00"
         },
         {
             "name": "psr/container",
