@@ -6429,16 +6429,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.4.31",
+            "version": "v3.4.32",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "3dc414b7db30695bae671a1d86013d03f4ae9834"
+                "reference": "768f817446da74a776a31eea335540f9dcb53942"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/3dc414b7db30695bae671a1d86013d03f4ae9834",
-                "reference": "3dc414b7db30695bae671a1d86013d03f4ae9834",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/768f817446da74a776a31eea335540f9dcb53942",
+                "reference": "768f817446da74a776a31eea335540f9dcb53942",
                 "shasum": ""
             },
             "require": {
@@ -6484,7 +6484,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2019-08-20T13:31:17+00:00"
+            "time": "2019-09-10T10:38:46+00:00"
         },
         {
             "name": "twig/twig",
@@ -7919,16 +7919,16 @@
         },
         {
             "name": "mglaman/phpstan-drupal",
-            "version": "0.11.10",
+            "version": "0.11.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mglaman/phpstan-drupal.git",
-                "reference": "decb05ddd5b3f82481db8911ba78b17563a41460"
+                "reference": "c77b8de6678b5542d078229c57c0244d141159e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mglaman/phpstan-drupal/zipball/decb05ddd5b3f82481db8911ba78b17563a41460",
-                "reference": "decb05ddd5b3f82481db8911ba78b17563a41460",
+                "url": "https://api.github.com/repos/mglaman/phpstan-drupal/zipball/c77b8de6678b5542d078229c57c0244d141159e1",
+                "reference": "c77b8de6678b5542d078229c57c0244d141159e1",
                 "shasum": ""
             },
             "require": {
@@ -7936,7 +7936,7 @@
                 "php": "^7.1",
                 "phpstan/phpstan": "^0.11",
                 "symfony/yaml": "~3.4.5|^4.2",
-                "webflo/drupal-finder": "^1.1"
+                "webflo/drupal-finder": "^1.2"
             },
             "require-dev": {
                 "composer/installers": "^1.6",
@@ -7994,7 +7994,7 @@
                 }
             ],
             "description": "Drupal extension and rules for PHPStan",
-            "time": "2019-07-09T18:58:39+00:00"
+            "time": "2019-10-18T11:41:02+00:00"
         },
         {
             "name": "mikey179/vfsstream",
