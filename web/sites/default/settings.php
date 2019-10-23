@@ -787,3 +787,10 @@ if (file_exists($app_root . '/' . $site_path . '/environments/settings.platforms
 if (file_exists('/.dockerenv') && file_exists($app_root . '/' . $site_path . '/environments/settings.docksal.php')) {
   include $app_root . '/' . $site_path . '/environments/settings.docksal.php';
 }
+
+/**
+ * Include a local settings file if one exists.
+ */
+if (file_exists($app_root . '/' . $site_path . '/environments/settings.local.php')) {
+  include $app_root . '/' . $site_path . '/environments/settings.local.php';
+}
