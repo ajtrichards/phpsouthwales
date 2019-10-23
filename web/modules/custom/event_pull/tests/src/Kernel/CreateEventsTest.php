@@ -155,13 +155,10 @@ class CreateEventsTest extends EntityKernelTestBase {
     $events = collect($this->nodeStorage->loadMultiple())->values();
     $this->assertSame(2, $events->count());
 
-    tap($events->get(0), function (NodeInterface $event) {
-      $this->assertSame('How to do more with PHPCS', $event->label());
-    });
-
-    tap($events->get(1), function (NodeInterface $event) {
-      $this->assertSame('Practical Static Analysis', $event->label());
-    });
+    $this->assertSame([
+      'Practical Static Analysis',
+      'How to do more with PHPCS',
+    ], $events->map->label()->toArray());
   }
 
   /**
@@ -187,13 +184,8 @@ class CreateEventsTest extends EntityKernelTestBase {
       'type' => 'event',
     ]))->values();
 
-    tap($events->get(0), function (NodeInterface $event) use ($venue): void {
-      $this->assertSame($venue->id(), $event->get('field_venue')->getString());
-    });
-
-    tap($events->get(1), function (NodeInterface $event) use ($venue): void {
-      $this->assertSame($venue->id(), $event->get('field_venue')->getString());
-    });
+    $this->assertSame($venue->id(), $events->get(0)->get('field_venue')->getString());
+    $this->assertSame($venue->id(), $events->get(1)->get('field_venue')->getString());
   }
 
 }

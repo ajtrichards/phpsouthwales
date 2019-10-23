@@ -42,9 +42,10 @@ class EventController {
       'type' => 'event',
     ];
 
-    return tap(Node::create($values), function (NodeInterface $event): void {
-      $event->save();
-    });
+    $node = Node::create($values);
+    $node->save();
+
+    return $node;
   }
 
   /**
@@ -59,18 +60,17 @@ class EventController {
    *   The updated node.
    */
   public function update(NodeInterface $node, Event $event): NodeInterface {
-    return tap($node, function (NodeInterface $node) use ($event): void {
-      $node->setTitle($event->getName());
-      $node->set('body', [
-        'format' => 'basic_html',
-        'value' => $event->getDescription(),
-      ]);
-      $node->set('field_event_date', $event->getEventDate());
-      $node->set('field_rsvp_count', $event->getRsvpCount());
+    $node->setTitle($event->getName());
+    $node->set('body', [
+      'format' => 'basic_html',
+      'value' => $event->getDescription(),
+    ]);
+    $node->set('field_event_date', $event->getEventDate());
+    $node->set('field_rsvp_count', $event->getRsvpCount());
+    $node->setNewRevision();
+    $node->save();
 
-      $node->setNewRevision();
-      $node->save();
-    });
+    return $node;
   }
 
 }

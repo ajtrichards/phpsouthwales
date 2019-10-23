@@ -147,9 +147,10 @@ class CreateOrUpdateNodeForExternalEvent extends JobTypeBase implements Containe
       'vid' => 'venues',
     ];
 
-    return tap(Term::create($values), function (TermInterface $venue): void {
-      $venue->save();
-    });
+    $venue = Term::create($values);
+    $venue->save();
+
+    return $venue;
   }
 
   /**
