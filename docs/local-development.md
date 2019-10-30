@@ -28,4 +28,6 @@
     fin drupal-install
     ```
 
+    If this stage fails due to `RuntimeException: Missing $settings['hash_salt'] in settings.php` - make sure you have the `.env` file in your root folder and there's a random string for the ENV variable `DRUPAL_SALT`
+
 1. Open <http://phpsouthwales.docksal> in a browser.
